@@ -1,0 +1,17 @@
+{% extends "blog/Base.html" %}
+{% block content %}
+    <body bgcolor="grey">
+        <div align="center">
+            <hr color="white">
+            <span>this is the home page. <i>home amigo,<b>la casa</b></i></span>
+            <hr color="white">
+
+        {% for post in posts_key %}
+            <h5>{{ post.title }}</h5>
+            <p>a post by {{post.author}} on {{ post.date }}</p>
+            <p>{{post.content}}</p>
+        {% endfor %}
+        </div>
+    <a href="http://localhost:8000/about">About</a>
+    </body>
+{% endblock content %}
